@@ -1,0 +1,15 @@
+
+<div id="shopping-cart"></div>
+<script src="https://firebasestorage.googleapis.com/v0/b/mini-farm-storefront.appspot.com/o/Minifarm-ShopifyBuyJS%2Fminifarm-cart-body.js?alt=media&token=935a8fea-2ce8-4477-83ef-29da814965f2"></script>
+<script>
+    const clearBodyChecker = (ck) => {
+        clearInterval(ck);
+        window.MiniFarmCartBody.default()
+    };
+    const bodyChecker = setInterval(() => {
+        if (window.shopifyClient) {
+            clearBodyChecker(bodyChecker);
+        }
+    }, 100);
+</script>
+
